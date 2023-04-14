@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head style="background-color: blueviolet;">
+    <title>Sign Up </title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ai.jpeg"
+    />
+    <link rel="stylesheet" href="styles2.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript">
+      function validate(){
+          if(document.myform.myfirst.value==""){
+              alert("Please enter first name");
+              document.myform.myfirst.focus();
+              return false;
+          }
+          if(document.myform.myemail.value==""){
+              alert("Please provide your email");
+              document.myform.myemail.focus();
+              return false;
+          }
+          if(document.myform.mypass.value==""){
+              alert("Please enter password");
+              document.myform.mypass.focus();
+              return false;
+          }
+          if(document.myform.mypass2.value==""){
+              alert("Please confirm password");
+              document.myform.mypass2.focus();
+              return false;
+          }
+          if(document.myform.mypass.value != document.myform.mypass2.value){
+              alert("Password did not match! Please try again.");
+              return false;
+          }          
+          return (true);          
+      }
+  </script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="home2.html" class="logo">
+          Airline Management System
+      </a>
+      <nav class="navbar">
+          <a href="home2.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">|</a>
+          <a href="login2.html">Login</a>
+          <a href="signup2.html" class="btn">Sign Up</a>
+      </nav>
+    </header>
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <!-- <h4>It's free and only takes a minute</h4> -->
+      <form name="myform" onsubmit="return(validate());">
+        <label>First Name</label>
+        <input type="text" placeholder="" name="myfirst"/>
+        <label>Last Name</label>
+        <input type="text" placeholder="" name="mylast"/>
+        <label>Email</label>
+        <input type="email" placeholder="" name="myemail"/>
+        <label>Password</label>
+        <input type="password" placeholder="" name="mypass"/>
+        <label>Confirm Password</label>
+        <input type="password" placeholder="" name="mypass2"/>
+        <input type="submit" value="Submit" />
+      <!-- <closeform></closeform> -->
+      </form> 
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+    </div>
+    <p class="para-2">
+      Already have an account? <a href="login2.html">Login here</a>
+    </p>
+  </body>
+</html>
+
+

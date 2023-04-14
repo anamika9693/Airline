@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login </title>
+    <link rel="stylesheet" href="styles2.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ai.jpeg"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript">
+        function validate(){
+            if(document.myform.myemail.value==""){
+                alert("Please provide your email");
+                document.myform.myemail.focus();
+                return false;
+            }
+            if(document.myform.mypass.value==""){
+                alert("Please enter password");
+                document.myform.myemail.focus();
+                return false;
+            }
+            return (true);            
+        }
+    </script>
+
+  </head>
+  <body>
+    <header class="header">
+        <a href="home2.html" class="logo">
+            Airline Management System
+        </a>
+        <nav class="navbar">
+            <a href="home2.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">|</a>
+            <a href="login2.html">Login</a>
+            <a href="signup2.html" class="btn">Sign Up</a>
+        </nav>
+    </header>
+    <div class="login-box">
+      <h1>Login</h1>
+      <form name="myform" onsubmit="return(validate());">
+        <label id="email-id" >Email</label>
+        <input type="email" placeholder="" name="myemail"/>
+        <label id="pass-id">Password</label>
+        <input type="password" placeholder=""  name="mypass"/>
+        <input type="submit" value="Submit" />
+      <closeform></closeform></form>
+    </div>
+    <p class="para-2">
+      Not have an account? <a href="signup2.html">Sign Up Here</a>
+    </p>
+    
+  </body>
+</html>
